@@ -1,6 +1,8 @@
 var calculatejs = document.getElementById('calculate');
-var priceTot=5;
+var coupon: [ CaretPosition, forzacatania, ]
+
 calculatejs.addEventListener('click',function(){
+    var priceTot=5;
     var namejs = document.getElementById('name');
     if(namejs.value == '') {
         alert('You not write the name of burger, please retry')
