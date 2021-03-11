@@ -1,11 +1,5 @@
 var calculatejs = document.getElementById('calculate');
-var priceTot;
-var priceLettuce;
-var priceFriedegg;
-var priceTomato;
-var priceCheese;
-var priceMustard;
-var priceKetchup;
+var priceTot=5;
 calculatejs.addEventListener('click',function(){
     var namejs = document.getElementById('name');
     if(namejs.value == '') {
@@ -16,9 +10,9 @@ calculatejs.addEventListener('click',function(){
     console.dir(burgerName,liIngredients)
     for (i=0; i<liIngredients.length;i++){
         var liIngredientsOnce=liIngredients[i];
-        console.log(liIngredientsOnce)
         if (liIngredientsOnce.checked){
-
+            priceTot += parseInt(liIngredientsOnce.dataset.price)
         }
+        console.log( priceTot)
     }
 })
