@@ -12,9 +12,7 @@ for(i=0;i<checkboxListato.length;i++){
             checkboxLi.checked=true
         }
         console.log(checkboxLi.checked)
-
     })
-
 }
 calculatejs.addEventListener('click',function(){
     var priceTot=5;
@@ -36,7 +34,7 @@ calculatejs.addEventListener('click',function(){
     for(i=0; i<couponArr.length;i++) {
         if(couponjs==couponArr[i]) {
             priceTot = Math.round(priceTot*0.8);
-
+            couponArr.splice(i, 1);
         }
     }
     // occuparci nell eliminare l'elemneto coupon gia usato
@@ -44,6 +42,6 @@ calculatejs.addEventListener('click',function(){
 
 
 
-    console.log(priceTot);
+    console.log(priceTot,couponArr);
     document.getElementById('finalprice').innerHTML = '€' + priceTot;
 })
