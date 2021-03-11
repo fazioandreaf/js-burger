@@ -1,6 +1,21 @@
 var calculatejs = document.getElementById('calculate');
 var couponArr= [ 'BRS4AQ9CW6', 'LALUJ3ER9P', '2FTGNQVGRC', '374HKEZ243']
 var priceTot;
+var checkboxListato = document.getElementsByTagName('li');
+for(i=0;i<checkboxListato.length;i++){
+    var checkboxListatoOnce= checkboxListato[i];
+    checkboxListatoOnce.addEventListener('click',function(){
+        var checkboxLi=this.children[2];
+        if(checkboxLi.checked){
+            checkboxLi.checked=false
+        } else {
+            checkboxLi.checked=true
+        }
+        console.log(checkboxLi.checked)
+
+    })
+
+}
 calculatejs.addEventListener('click',function(){
     var priceTot=5;
     var namejs = document.getElementById('name');
