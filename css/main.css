@@ -38,6 +38,9 @@ main {
 .ingredients li {
     flex: 1 0 50%;
 }
+.ingredients li input {
+    pointer-events:none;
+}
 .ingredients li img {
     max-width: 40px;
     vertical-align: middle;
